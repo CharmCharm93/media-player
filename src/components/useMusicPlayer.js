@@ -23,9 +23,6 @@ const useMusicPlayer = () => {
         isPlaying: true,
       }));
     }
-    console.log(
-      currentTrackIndex !== null && trackList[currentTrackIndex].name
-    );
   }
 
   // Toggle play or pause

@@ -1,11 +1,10 @@
 import styled from "@emotion/styled";
 import { Container } from "@mui/material";
-import React, { useState } from "react";
+import React from "react";
 import useMusicPlayer from "../components/useMusicPlayer";
 
 function MediaList() {
   const { trackList, playTrack } = useMusicPlayer();
-  const [selected, setSelected] = useState("");
   const StyleBox = styled("div")({
     border: "3px solid #dff9fb",
     borderRadius: "10px",
@@ -27,11 +26,7 @@ function MediaList() {
       {trackList.map((track, index) => (
         <StyleBox
           key={index}
-          style={{
-            borderLeft: index === selected && " 7px outset red",
-          }}
           onClick={() => {
-            setSelected(index);
             playTrack(index);
           }}
         >
